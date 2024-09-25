@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Survey</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* GMU Color Scheme */
+        h1 {
+            color: #006633; /* GMU Dark Green */
+        }
+
+        .text-success {
+            color: #006633; /* GMU Dark Green */
+        }
+
+        .section-heading {
+            color: #006633; /* GMU Dark Green */
+        }
+
+        .list-group-item {
+            background-color: #f2f2f2;
+            border-color: #006633; /* GMU Dark Green Border */
+        }
+
+        #header-box {
+            border: 5px solid #006633; /* GMU Dark Green Border */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            background-color: #f2f2f2; /* Light Gray Background */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Ensures space between the logo and the links */
+            background-color: #006633; /* GMU Dark Green */
+            padding: 1em;
+            border-bottom: 5px solid #FFCC33; /* GMU Yellow */
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #FFCC33;
+            color: #006633;
+        }
+
+        /* Logo image styling */
+        .navbar img {
+            height: 50px; /* Adjust the size of the logo as needed */
+            width: auto;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            max-width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: left; /* Aligning content in the center */
+        }
+
+        footer {
+            margin-top: 30px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        /* Submit Button Styles */
+        .btn {
+            background-color: #FFCC33; /* GMU Yellow */
+            color: white; /* Text color */
+            border: none; /* No border */
+        }
+
+        .btn:hover {
+            background-color: #006633; /* GMU Dark Green */
+            color: white; /* Text color remains white */
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- GMU Logo on the left -->
+        <img src="GMU.jpg" alt="GMU Logo">
+        <!-- Links on the right -->
+        <div>
+            <a href="Index.html">Home</a>
+            <a href="CS_Department.html">CS Department</a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">CS Department Survey</h1>
+
+        <!-- Survey Form -->
+        <form action="#" method="POST" autocomplete="on">
+            <!-- User Information -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Name (Required):</label>
+                <input type="text" id="name" name="name" class="form-control" required autofocus placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email (Required):</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="example@email.com">
+            </div>
+            <div class="mb-3">
+                <label for="tel" class="form-label">Telephone (Required):</label>
+                <input type="tel" id="tel" name="tel" class="form-control" required placeholder="123-456-7890">
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+                <label for="address" class="form-label">Street Address:</label>
+                <input type="text" id="address" name="address" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="city" class="form-label">City:</label>
+                <input type="text" id="city" name="city" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="state" class="form-label">State:</label>
+                <input type="text" id="state" name="state" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="zip" class="form-label">Zip Code:</label>
+                <input type="text" id="zip" name="zip" class="form-control">
+            </div>
+
+            <!-- Feedback: Campus Experience -->
+            <div class="mb-3">
+                <label>What did you like most about the campus? (Check all that apply)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="students" name="like" value="students">
+                    <label class="form-check-label" for="students">Students</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="location" name="like" value="location">
+                    <label class="form-check-label" for="location">Location</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Campus" name="like" value="Campus">
+                    <label class="form-check-label" for="Campus">Campus</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Dorm Rooms" name="like" value="Dorm Rooms">
+                    <label class="form-check-label" for="Dorm Rooms">Dorm Rooms</label>
+                </div>
+
+                <!-- Add other checkboxes similarly -->
+            </div>
+
+            <!-- How They Heard About Us -->
+            <div class="mb-3">
+                <label>How did you hear about the university?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="friends" name="heard_from" value="friends">
+                    <label class="form-check-label" for="friends">Friends</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="tv" name="heard_from" value="television">
+                    <label class="form-check-label" for="tv">Television</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="internet" name="heard_from" value="internet">
+                    <label class="form-check-label" for="internet">Internet</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="other" name="heard_from" value="other">
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+                <!-- Add other radio buttons similarly -->
+            </div>
+
+            <!-- Text Area for Additional Comments -->
+            <div class="mb-3">
+                <label for="comments" class="form-label">Additional Comments:</label>
+                <textarea id="comments" name="comments" class="form-control" rows="4"></textarea>
+            </div>
+
+            <!-- High School Graduation Date -->
+            <div class="mb-3">
+                <label for="grad-month" class="form-label">High School Graduation Month:</label>
+                <input list="months" id="grad-month" name="grad-month" class="form-control">
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <!-- Add other months similarly -->
+                </datalist>
+            </div>
+
+            <!-- Likelihood of Recommendation -->
+            <div class="mb-3">
+                <label for="recommend" class="form-label">How likely are you to recommend this university?</label>
+                <select id="recommend" name="recommend" class="form-select">
+                    <option value="Very Likely">Very Likely</option>
+                    <option value="Likely">Likely</option>
+                    <option value="Unlikely">Unlikely</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit Survey</button>
+        
+        </form>
+    <!-- Footer Section -->
+        <footer class="container mt-5 text-center">
+            <p>&copy; 2024 Computer Science Department, George Mason University</p>
+        </footer>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+
+        // Scroll to the top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

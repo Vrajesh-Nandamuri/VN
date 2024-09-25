@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("me.jpg");
+  min-height: 100%;
+}
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: none;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a href="Survey.html">Survey Form</a>
+  <a href="CS_Department.html">CS Department</a>
+</div>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%; padding-top: 50px;">
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Vrajesh Nandamuri</b></h1>
+    <p>AN ASPIRING ENGINEER.</p>
+    <img src="./me.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="./me.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+  </header>
+
+  <!-- Certification Section -->
+  <div class="w3-padding-32 w3-content" id="certification">
+    <h2 class="w3-text-grey">My Certifications</h2>
+    <hr class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="C1.jpg" style="width:100%" height="400">
+        <img src="C2.jpg" style="width:100%">
+      </div>
+      <div class="w3-half">
+        <img src="C3.jpg" style="width:100%" height="350">
+        <img src="C5.jpg" style="width:100%" height="350">
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>I am currently pursuing a Master of Science in Computer Science at George Mason University, with an expected graduation date of May 2025. With a strong foundation in software development and cloud technologies, I am skilled in programming languages such as C, C++, Java, Python, and SQL, and I have experience with full-stack web development using AngularJS, ReactJS, and Spring Boot. I also hold several certifications, including Oracle Cloud Infrastructure Architect Associate and Microsoft Developer Associate (AZ-204), reflecting my proficiency in cloud computing and multi-cloud networking. <p>Throughout my academic and project experiences, I have worked on a variety of innovative solutions, including lung cancer detection using transfer learning and EfficientNet B2 architecture, achieving a 90.18% accuracy rate. I am also collaborating on a research paper focused on maize plant disease detection using deep learning techniques. My passion for problem-solving has led me to develop multiple applications, from real-time weather analysis to e-commerce platforms, showcasing my attention to detail and commitment to creating efficient, user-focused software.</p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+    <div class="w3-section">
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 703.589.5407</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: vnandamu@gmu.edu</p>
+    </div>
+  </div>  
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Scroll to Top Functionality
+window.onscroll = function() {
+  const button = document.getElementById("backToTop");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
